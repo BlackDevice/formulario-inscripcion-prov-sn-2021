@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/18f1d9fe30.js" crossorigin="anonymous"></script>
+    <title>Formulario de actualización de datos</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;600;700&display=swap');
+        .titulo_fotos {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.3%;
+            background-color: white;
+        }
+        
+        .titulo_fotos .col-auto img {
+            width: 120px;
+        }
+        
+        .titulo_cabeza {
+            display: flex;
+            justify-content: center;
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 24px;
+        }
+        
+        .titulo_cabeza span {
+            margin-right: 10px !important;
+        }
+        
+        .titulo_enunciado {
+            display: flex;
+            justify-content: left;
+            font-size: 14px;
+        }
+        
+        .datos_empresa {
+            font-family: 'Titillium Web', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            font-size: 16px;
+            align-items: center;
+        }
+        
+        .datos_empresa input {
+            width: 97%;
+        }
+        
+        .titulo_seccion {
+            font-weight: bold;
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 16px;
+        }
+        
+        .titulo_seccion b {
+            color: red;
+        }
+        
+        .datos_ubicacion {
+            font-family: 'Titillium Web', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            font-size: 16px;
+            align-items: center;
+        }
+        
+        .datos_ubicacion select {
+            width: 97%;
+        }
+        
+        .datos_contacto {
+            font-family: 'Titillium Web', sans-serif;
+            display: flex;
+            justify-content: space-around;
+            text-align: left;
+            font-size: 16px;
+            align-items: center;
+        }
+        
+        .datos_contacto input {
+            width: 97%;
+        }
+        
+        .formato_telefono {
+            max-width: 550px;
+        }
+        
+        .datos_categoria {
+            font-family: 'Titillium Web', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            font-size: 16px;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .tabla_cat {
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: bolder;
+        }
+        
+        .tabla_cat_aling {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .borde_01 {
+            border: none;
+            border-radius: 10px;
+            padding: 1rem;
+            border-color: grey;
+            margin-bottom: 1rem;
+            box-shadow: 5px 21px 36px -3px rgba(46, 46, 46, 0.46);
+        }
+        
+        .text-info {
+            font-family: 'Titillium Web', sans-serif;
+            text-align: center !important;
+            font-size: 16px;
+            align-items: center;
+            color: black !important;
+            padding-top: 0, 2%;
+            padding-bottom: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar fixed-bottom bg-light" style="height: 70px;">
+        <div class="container-fluid">
+            <br>
+            <div class="container" style="display: flex;flex-direction: row; align-items: right;justify-content:center;">
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Guardar actualización de datos
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class=" container-fluid">
+        <div class="container titulo_fotos">
+            <div class=" col-auto">
+                <img src="https://qaportal.senegocia.com/Content/app/images/Empresas/20376_5250_20200720161913.png" alt="">
+            </div>
+            <div class=" col-auto">
+                <img src="https://cl.senegocia.com/wp-content/uploads/2019/11/logo.png.webp" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class=" container-fluid">
+                <div class="container text-info">
+                    <h2>Estimado proveedor</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="titulo_cabeza">
+                    <span><i class="fal fa-industry"></i></span> Información de la empresa proveedora</div>
+
+                <div class=" container-fluid">
+                    <hr>
+                    <div class="container datos_empresa">
+                        <div class="col">
+                            <div class="titulo_enunciado">
+
+                                <label class="titulo_seccion">RUT</label>
+                            </div>
+                            <input id="rut_prov" disabled placeholder="1111111-1" class="form-control">
+                        </div>
+                        <div class=" col">
+                            <div class="titulo_enunciado">
+
+                                <label class="titulo_seccion">Nombre o razón social</label>
+                            </div>
+                            <input id="nombre_prov" disabled placeholder="PROVEEDOR FICTICIO S.A" class="form-control">
+                        </div>
+
+
+                        <div class="col">
+                            <div class="titulo_enunciado">
+
+                                <div class="titulo_seccion">Nombre de fantasía <b>*</b></div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Ingrese el nombre de fantasía">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container datos_ubicacion">
+                        <div class="col">
+                            <label for="" class="titulo_seccion">País</label>
+                            <select class="form-select" aria-label="Default select example" disabled>
+                                <option selected>Chile</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="" class="titulo_seccion">Región<b>*</b></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>METROPOLITANA DE SANTIAGO</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="" class="titulo_seccion">Comuna<b>*</b></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>PROVIDENCIA</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="container datos_contacto">
+                        <div class="col">
+                            <label for="" class="titulo_seccion">Ciudad <b>*</b> </label>
+                            <input type="text" class="form-control" placeholder="Ingrese su ciudad">
+                        </div>
+                        <div class="col">
+                            <label for="" class="titulo_seccion">Dirección <b>*</b> </label>
+                            <input type="text" class="form-control" placeholder="Ingrese su dirección">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container datos_contacto">
+                        <div class="col">
+                            <label for="" class="titulo_seccion">Giro <b>*</b> </label>
+                            <input type="text" class="form-control" placeholder="Ingrese su giro comercial">
+                        </div>
+                        <div class="col">
+                            <label for="" class="titulo_seccion">Sitio Web <b>*</b> </label>
+                            <input type="text" class="form-control" placeholder="Ingrese su sitio web">
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <div class="container">
+                        <div class="titulo_cabeza">
+                            <span><i class="fal fa-user"></i></span> Información de la persona de contacto</div>
+                        <hr>
+                        <div class="container datos_contacto">
+                            <div class="col">
+                                <label for="" class="titulo_seccion">Nombres <b>*</b> </label>
+                                <input type="text" class="form-control" placeholder="Ingrese el nombre del contacto">
+                            </div>
+                            <div class="col">
+                                <label for="" class="titulo_seccion">Apellidos <b>*</b> </label>
+                                <input type="text" class="form-control" placeholder="Ingrese los apellidos del contacto">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container datos_contacto">
+                            <div class="col" style="margin-right: 1rem;">
+                                <label for="" class="titulo_seccion">Teléfono fijo <b>*</b> </label>
+                                <div class="input-group mb-3">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>+56</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+
+                                    <input type="tel" class="form-control" placeholder="1234567" aria-label="Server">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="" class=" titulo_seccion">Teléfono móvil <b>*</b> </label>
+                                <div class="input-group mb-3">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>+56</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+
+                                    <input type="tel" class="form-control" placeholder="1234567" aria-label="Server">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container ">
+                            <div class="col">
+                                <label for="" class="titulo_seccion">Email <b>*</b> </label>
+                                <input type="email" class="form-control" id="email_prov" placeholder="Ingrese su email empresarial">
+                            </div>
+
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="container">
+                        <div class="titulo_cabeza">
+                            <span><i class="fal fa-tags"></i></span> Seleccione las categorías en las que desea participar
+                        </div>
+                        <hr>
+                        <div class="container text-info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class="tabla_cat_aling">
+                            <table class="table table-borderless tabla_cat">
+                                <thead>
+                                    <tr>
+
+                                        <th>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="ABARROTES">
+                                                <label class="form-check-label" for="ABARROTES">
+                                                    ABARROTES
+                                                </label>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="ARRIENDO">
+                                                <label class="form-check-label" for="ARRIENDO">
+                                                    ARRIENDO
+                                                </label>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="ABARROTES">
+                                                <label class="form-check-label" for="ABARROTES">
+                                                    ABARROTES
+                                                </label>
+                                            </div>
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="ARTICULOS_ASEO">
+                                                <label class="form-check-label" for="ARTICULOS_ASEO">
+                                                    ARTÍCULOS DE ASEO
+                                                </label>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="ARTICULOS_DEPORTIVOS">
+                                                <label class="form-check-label" for="ARTICULOS_DEPORTIVOS">
+                                                    ARTÍCULOS DEPORTIVOS
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="ARTICULOS_DEPORTIVOS">
+                                                <label class="form-check-label" for="ARTICULOS_DEPORTIVOS">
+                                                    ARTÍCULOS DEPORTIVOS
+                                                </label>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="ARTICULOS_UNIVERSIDAD">
+                                                <label class="form-check-label" for="ARTICULOS_UNIVERSIDAD">
+                                                    ARTÍCULOS UNIVERSIDAD
+                                                </label>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="ASEO_DESINFECCION">
+                                                <label class="form-check-label" for="ASEO_DESINFECCION">
+                                                    ASEO Y DESINFECCIÓN
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="ASEO_DESINFECCION">
+                                                <label class="form-check-label" for="ASEO_DESINFECCION">
+                                                    ASEO Y DESINFECCIÓN
+                                                </label>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="ASESORIA">
+                                                <label class="form-check-label" for="ASESORIA">
+                                                    ASESORIA
+                                                </label>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="BEBESTIBLES">
+                                                <label class="form-check-label" for="BEBESTIBLES">
+                                                    BEBESTIBLES
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="BEBESTIBLES">
+                                                <label class="form-check-label" for="BEBESTIBLES">
+                                                    BEBESTIBLES
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="BIBLIOGRAFIA">
+                                                <label class="form-check-label" for="BIBLIOGRAFIA">
+                                                    BIBLIOGRAFIA
+                                                </label>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="COMBUSTIBLE">
+                                                <label class="form-check-label" for="COMBUSTIBLE">
+                                                    COMBUSTIBLE
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="COMBUSTIBLE">
+                                                <label class="form-check-label" for="COMBUSTIBLE">
+                                                    COMBUSTIBLE
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="COMPUTACION">
+                                                <label class="form-check-label" for="COMPUTACION">
+                                                    COMPUTACIÓN
+                                                </label>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="COMPUTADORES">
+                                                <label class="form-check-label" for="COMPUTADORES">
+                                                    COMPUTADORES
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="COMPUTADORES">
+                                                <label class="form-check-label" for="COMPUTADORES">
+                                                    COMPUTADORES
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="COMUNICACIONES">
+                                                <label class="form-check-label" for="COMUNICACIONES">
+                                                    COMUNICACIONES
+                                                </label>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="CONSULTORIAS_COMUNICA">
+                                                <label class="form-check-label" for="CONSULTORIAS_COMUNICA">
+                                                    CONSULTORIAS DE COMUNICACIÓN
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="CONSULTORIAS_COMUNICA">
+                                                <label class="form-check-label" for="CONSULTORIAS_COMUNICA">
+                                                    CONSULTORIAS
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+                <br>
+            </div>
+        </div>
+
+        <!--modal-->
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="font-family: 'Titillium Web', sans-serif;">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel" style="font-weight: 600;"><span style="padding:8px;"><i class="fal fa-exclamation-triangle"></i></span>Advertencia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="font-family: 'Titillium Web', sans-serif;">
+                        Estimado Proveedor, no ha seleccionado ninguna categoría. <br> ¿Desea guardar el formulario de igual manera?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn  btn-outline-secondary" data-bs-dismiss="modal">Volver</button>
+                        <a type="button" class="btn btn-outline-success" href="./formulario-completado.html">
+                            Guardar sin categorias
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
